@@ -29,7 +29,7 @@
     
     <servlet-mapping>
         <servlet-name>PropertiesResource</servlet-name>
-        <url-pattern>/PropertiesResource</url-pattern>
+        <url-pattern>/*</url-pattern>
     </servlet-mapping>
     
 </web-app>
