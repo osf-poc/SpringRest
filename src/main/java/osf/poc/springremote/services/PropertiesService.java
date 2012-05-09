@@ -3,6 +3,7 @@ package osf.poc.springremote.services;
 import java.util.ArrayList;
 import java.util.List;
 import javax.ejb.Stateless;
+import org.springframework.stereotype.Service;
 import osf.poc.springremote.model.Property;
 
 /**
@@ -10,6 +11,7 @@ import osf.poc.springremote.model.Property;
  * @author Jeremy
  */
 @Stateless
+@Service
 public class PropertiesService implements PropertiesServiceLocal {
     
     private List<Property> properties = new ArrayList<Property>();
