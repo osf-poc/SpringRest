@@ -10,7 +10,6 @@ import osf.poc.springremote.model.Property;
  *
  * @author Jeremy
  */
-@Stateless
 @Service
 public class PropertiesService implements PropertiesServiceLocal {
     

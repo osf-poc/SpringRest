@@ -18,7 +18,7 @@ public class RestController {
     public RestController(PropertiesServiceLocal service) {
         this.service = service;
     }
-        
+    
     @RequestMapping(method = RequestMethod.GET, value = "/properties")
     public ModelAndView getProperties(){
         return new ModelAndView("properties", "properties", new Properties(service.getProperties()));

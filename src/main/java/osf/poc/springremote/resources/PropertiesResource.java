@@ -1,9 +1,8 @@
 package osf.poc.springremote.resources;
 
 import java.util.List;
-import javax.ejb.EJB;
 import osf.poc.springremote.model.Property;
-import osf.poc.springremote.services.PropertiesService;
+import osf.poc.springremote.services.PropertiesServiceLocal;
 
 /**
  *
@@ -11,8 +10,11 @@ import osf.poc.springremote.services.PropertiesService;
  */
 public class PropertiesResource implements IPropertiesResource {
     
-    @EJB
-    private PropertiesService service;
+    private PropertiesServiceLocal service;
+    
+    public PropertiesResource(PropertiesServiceLocal service) {
+        this.service = service;
+    }
 
     @Override
     public List<Property> getProperties() {

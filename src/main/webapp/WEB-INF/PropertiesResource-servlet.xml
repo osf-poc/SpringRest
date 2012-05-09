@@ -7,11 +7,13 @@
        http://www.springframework.org/schema/util/spring-util-3.0.xsd
 ">
     
-    <!--<bean id="PropertyList" class="java.util.List" />-->
+    <bean id="service" class="osf.poc.springremote.services.PropertiesService" />
     
     <!-- Http PropertiesResource service bean declaration -->
     <bean id="PropertiesResource" class="osf.poc.springremote.resources.PropertiesResource">
-        <!--<property name="properties" ref="PropertyList"/>-->
+        <constructor-arg>
+            <ref bean="service" />
+        </constructor-arg>
     </bean>
     
     <!-- Http Invoker service declaration -->

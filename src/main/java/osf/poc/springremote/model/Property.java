@@ -1,23 +1,20 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package osf.poc.springremote.model;
 
-/**
- *
- * @author Jeremy
- */
-public class Property {
-    
+import java.io.Serializable;
+
+public class Property implements Serializable {
     private String name;
     private String value;
     
     public Property() {
+        super();
+        
         //Nothing
     }
     
     public Property(String name, String value) {
+        super();
+        
         this.name = name;
         this.value = value;
     }
