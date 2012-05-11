@@ -7,7 +7,7 @@
        http://www.springframework.org/schema/util
        http://www.springframework.org/schema/util/spring-util-3.0.xsd">
     
-    <bean id="service" class="osf.poc.springremote.services.PropertiesService" />
+    <bean id="service" class="osf.poc.services.PropertiesService" />
     
     <bean class="osf.poc.springremote.controller.RestController">
         <constructor-arg>
@@ -23,7 +23,7 @@
     <bean id="jaxbMarshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
         <property name="classesToBeBound">
             <list>
-                <value>osf.poc.springremote.model.Properties</value>
+                <value>osf.poc.springremote.resources.PropertiesRest</value>
             </list>
         </property>
     </bean>

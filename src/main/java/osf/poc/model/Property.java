@@ -1,20 +1,20 @@
-package osf.poc.springremote.model;
+package osf.poc.model;
 
 import java.io.Serializable;
 
+/**
+ * Main model class representing a configuration property
+ */
 public class Property implements Serializable {
+    
     private String name;
     private String value;
     
     public Property() {
-        super();
-        
-        //Nothing
+        // Nothing to do
     }
     
     public Property(String name, String value) {
-        super();
-        
         this.name = name;
         this.value = value;
     }

@@ -1,18 +1,17 @@
 package osf.poc.springremote.resources;
 
 import java.util.List;
-import osf.poc.springremote.model.Property;
-import osf.poc.springremote.services.PropertiesServiceLocal;
+import osf.poc.model.Property;
+import osf.poc.services.PropertiesServiceLocal;
 
 /**
- *
- * @author Jeremy
+ * Represent the resource shared through the HTTP invoder
  */
-public class PropertiesResource implements IPropertiesResource {
+public class PropertiesHttpInvoker implements IPropertiesHttpInvoker {
     
     private PropertiesServiceLocal service;
     
-    public PropertiesResource(PropertiesServiceLocal service) {
+    public PropertiesHttpInvoker(PropertiesServiceLocal service) {
         this.service = service;
     }
 

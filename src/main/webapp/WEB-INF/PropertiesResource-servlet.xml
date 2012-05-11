@@ -7,10 +7,10 @@
        http://www.springframework.org/schema/util/spring-util-3.0.xsd
 ">
     
-    <bean id="service" class="osf.poc.springremote.services.PropertiesService" />
+    <bean id="service" class="osf.poc.services.PropertiesService" />
     
     <!-- Http PropertiesResource service bean declaration -->
-    <bean id="PropertiesResource" class="osf.poc.springremote.resources.PropertiesResource">
+    <bean id="PropertiesResource" class="osf.poc.springremote.resources.PropertiesHttpInvoker">
         <constructor-arg>
             <ref bean="service" />
         </constructor-arg>
@@ -23,7 +23,7 @@
         <property name="service" ref="PropertiesResource"/>
  
         <!-- resourceInterface is the http service interface which is exposed -->
-        <property name="serviceInterface" value="osf.poc.springremote.resources.IPropertiesResource"/>
+        <property name="serviceInterface" value="osf.poc.springremote.resources.IPropertiesHttpInvoker" />
 
     </bean>
     
