@@ -4,7 +4,7 @@ import java.util.List;
 import osf.poc.model.Property;
 
 /**
- * Abstracted resource shared using HTTP invoder
+ * Abstracted resource shared using HTTP invoker
  */
 public interface IPropertiesHttpInvoker {
 

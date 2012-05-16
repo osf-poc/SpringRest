@@ -5,7 +5,7 @@ import osf.poc.model.Property;
 import osf.poc.services.PropertiesServiceLocal;
 
 /**
- * Represent the resource shared through the HTTP invoder
+ * Represent the resource shared through the HTTP invoker
  */
 public class PropertiesHttpInvoker implements IPropertiesHttpInvoker {
     
