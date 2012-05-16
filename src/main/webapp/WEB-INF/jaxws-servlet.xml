@@ -13,5 +13,7 @@
         <property name="baseAddress" value="http://localhost:8081/SpringRest-1.0-SNAPSHOT/jaxws/"/>
     </bean>
 
-    <bean id="propertiesServiceEndPoint" class="osf.poc.springremote.resources.PropertiesEndPoint" />
+    <bean id="propertiesServiceEndPoint" class="osf.poc.springremote.resources.PropertiesEndPoint">
+        <property name="properties" ref="service" />
+    </bean>
 </beans>
