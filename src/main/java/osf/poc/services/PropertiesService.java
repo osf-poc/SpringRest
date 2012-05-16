@@ -12,7 +12,6 @@ import osf.poc.model.Property;
  */
 @Service
 public class PropertiesService implements PropertiesServiceLocal {
-    
     @PersistenceContext
     private EntityManager em;
     
