@@ -1,6 +1,5 @@
 package osf.poc.springremote.resources;
 
-import java.util.ArrayList;
 import java.util.List;
 import javax.jws.WebMethod;
 import javax.jws.WebService;
@@ -13,8 +12,14 @@ import osf.poc.services.PropertiesServiceLocal;
  */
 @WebService(serviceName="PropertiesJAXWS")
 public class PropertiesEndPoint {
+    private PropertiesServiceLocal service;
+
+    public PropertiesEndPoint(PropertiesServiceLocal service) {
+        this.service = service;
+    }
+    
     @WebMethod
     public List<Property> getProperties() {
-        return new ArrayList<Property>();
+        return service.getProperties();
     }
 }
